@@ -53,6 +53,11 @@ body{
     text-align: center;
     color: white;
 }
+
+.center >h4 {
+    text-align: center;
+    color: gray;
+}
 /* navbar css */
 .slant-line {
     width: auto;
