@@ -47,17 +47,94 @@ body{
     margin-right: auto;
     width: 50%;
     padding-top: 25px;
+    text-align: center;
 }
 
-.center >h1 {
-    text-align: center;
-    color: white;
+.wrapper{
+    display: flex;
+}
+
+.wrapper .static-text{
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-text{
+    margin-left: 15px;
+    height: 80px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.dynamic-text li{
+    list-style: none;
+    color: #ADEFD1FF;
+    font-size: 30px;
+    font-weight: 400;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+
+.dynamic-text > li > span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 40px;
+}
+
+.dynamic-text li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing{
+    40%, 60%{
+        left: calc(100%);
+    }
+    100%{
+        left: 0;
+    }
 }
 
 .center >h4 {
     text-align: center;
     color: gray;
 }
+
+.center > a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.button {
+    width: 200px;
+    height: 25px;
+    background: linear-gradient(45deg,cyan,rgb(54, 54, 177));
+    padding: 10px;
+    text-align: center;
+    border-radius: 55px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+a.button:hover {
+    color: black;
+  }
+
 /* navbar css */
 .slant-line {
     width: auto;
@@ -69,6 +146,7 @@ body{
     float: left;
     width: 33.33%;
     padding-top: 30px;
+    padding-bottom: 15px;
   }
 
   .footer-col > a{
